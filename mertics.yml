@@ -1,0 +1,30 @@
+factTables:
+  - id: purchase_page
+    data:
+      name: purchase_page
+      datasource: ds_405gzm1nlqc3zcjh
+      userIdTypes:
+        - user_id
+      sql: >
+        SELECT
+            user_id as user_id,
+            first_event_time as timestamp,
+            is_click_pay
+
+        FROM vip.dws_vip_purchase_page_hi 
+        and dt >= date('2024-11-01') 
+        and dt <= date('2024-11-02')
+factMetrics:
+  - id: is_click_pay
+    data:
+      name: is_click_pay
+      metricType: proportion
+      numerator:
+        factTableId: purchase_page
+  - id: revenue
+    data:
+      name: is_click_pay_mean
+      metricType: mean
+      numerator:
+        factTableId: purchase_page
+        column: is_click_pay
