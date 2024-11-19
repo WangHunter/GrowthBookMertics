@@ -2,7 +2,7 @@ factTables:
   - id: purchase_page
     data:
       name: purchase_page
-      datasource: ds_405gzm1nlqc3zcjh
+      # datasource: ds_405gzm1nlqc3zcjh
       userIdTypes:
         - user_id
       sql: >

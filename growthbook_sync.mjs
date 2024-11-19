@@ -3,7 +3,7 @@ import fs from "fs";
 
 // Edit these constants as needed
 const FILE_NAME = 'metrics.yml';
-const API_HOST = 'https://us-ab-management.addx.live';
+// const API_HOST = 'https://us-ab-management.addx.live';
 const GB_API_KEY = process.env.GB_API_KEY;
 
 // Parse the yaml file
